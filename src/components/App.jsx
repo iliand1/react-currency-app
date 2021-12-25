@@ -14,7 +14,7 @@ function App() {
   const key = "6a855e142b555481b653ef50d8310800";
   const currencies = "EUR,BYN,RUB";
   const url = `http://api.currencylayer.com/live?access_key=${key}&currencies=${currencies}`;
- 
+
   fetch(url)
     .then((res) => res.json())
     .then((data) => setCurrency(data.quotes));
@@ -27,7 +27,7 @@ function App() {
         eur={currency.USDEUR.toFixed(2)}
         rus={currency.USDRUB.toFixed(2)}
       />
-      <Footer/>
+      <Footer />
     </div>
   );
 }

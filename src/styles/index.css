@@ -1,12 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.bgmy{
-    background-image: url("./pawel.jpg");
+.bgmy {
+  background-image: url("./pawel.jpg");
 }
 
 @layer components {
-    .btn {
-      @apply border rounded-2xl text-slate-800 bg-white opacity-70 shadow-md  w-1/4 h-40 flex justify-center items-center
-    }
+  .btn {
+    @apply border rounded-2xl text-slate-800 bg-white opacity-70 shadow-md  w-1/4 h-40 flex justify-center items-center;
   }
+}
