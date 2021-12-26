@@ -7,7 +7,7 @@ function Header() {
         Currency checker from USD To CNY, EUR and RUB
       </h1>
       <p className="text-lg sm:text-lg text-slate-200 mb-4">
-        Using currencylayer.api
+        Using freecurrencyapi
       </p>
     </div>
   );
