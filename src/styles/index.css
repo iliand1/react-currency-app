@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 .bgmy {
   background-image: url("./pawel.jpg");
 }

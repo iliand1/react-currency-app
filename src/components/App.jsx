@@ -3,8 +3,7 @@ import Header from "./Header";
 import Table from "./Table";
 import { useState, useEffect } from "react";
 import Footer from "./Footer";
-//TODO:new api
-//TODO:why api called 300 times
+
 function App() {
   const key = "81cb46c0-65a7-11ec-b453-9f263f29ac19";
   const base = "USD";
