@@ -10,7 +10,7 @@ function App() {
   const base = "USD";
   const url = `https://freecurrencyapi.net/api/v2/latest?apikey=${key}&base_currency=${base}`;
   const [currency, setCurrency] = useState({
-    BYR: 2.5,
+    CNY: 6.3,
     EUR: 0.88,
     RUB: 73,
   });
@@ -26,7 +26,7 @@ function App() {
     <div className="w-screen h-screen p-6 bgmy grid grid-rows-3">
       <Header />
       <Table
-        byn={currency.BYR.toFixed(2)}
+        cny={currency.CNY.toFixed(2)}
         eur={currency.EUR.toFixed(2)}
         rus={currency.RUB.toFixed(2)}
       />
