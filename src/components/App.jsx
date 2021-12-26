@@ -1,31 +1,34 @@
 import React from "react";
 import Header from "./Header";
 import Table from "./Table";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Footer from "./Footer";
-//TODO:Style
-
+//TODO:new api
+//TODO:why api called 300 times
 function App() {
+  const key = "81cb46c0-65a7-11ec-b453-9f263f29ac19";
+  const base = "USD";
+  const url = `https://freecurrencyapi.net/api/v2/latest?apikey=${key}&base_currency=${base}`;
   const [currency, setCurrency] = useState({
-    USDBYN: 2.5,
-    USDEUR: 0.88,
-    USDRUB: 73,
+    BYR: 2.5,
+    EUR: 0.88,
+    RUB: 73,
   });
-  const key = "6a855e142b555481b653ef50d8310800";
-  const currencies = "EUR,BYN,RUB";
-  const url = `http://api.currencylayer.com/live?access_key=${key}&currencies=${currencies}`;
-
-  fetch(url)
-    .then((res) => res.json())
-    .then((data) => setCurrency(data.quotes));
-
+  useEffect(() => {
+    setTimeout(() => {
+      fetch(url)
+        .then((res) => res.json())
+        .then((data) => setCurrency(data.data))
+        .catch((err) => console.log(err));
+    }, 1);
+  }, []);
   return (
     <div className="w-screen h-screen p-6 bgmy grid grid-rows-3">
       <Header />
       <Table
-        byn={currency.USDBYN.toFixed(2)}
-        eur={currency.USDEUR.toFixed(2)}
-        rus={currency.USDRUB.toFixed(2)}
+        byn={currency.BYR.toFixed(2)}
+        eur={currency.EUR.toFixed(2)}
+        rus={currency.RUB.toFixed(2)}
       />
       <Footer />
     </div>
