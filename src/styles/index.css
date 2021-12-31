@@ -6,7 +6,6 @@
   background-image: url("./bg.jpg");
 }
 
-
 @layer components {
   .btn {
     @apply border rounded-2xl text-slate-800 bg-white opacity-70 shadow-md  w-1/4 h-40 flex justify-center items-center;
