@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-.bgmy {
-  background-image: url("./pawel.jpg");
+.my-bg {
+  background-image: url("./bg.jpg");
 }
 
 @layer components {

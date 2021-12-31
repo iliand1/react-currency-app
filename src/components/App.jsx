@@ -1,9 +1,6 @@
 import React from "react";
-import Header from "./Header";
-import Table from "./Table";
 import { useState, useEffect } from "react";
-import Footer from "./Footer";
-
+import AppTemplate from "./Template";
 function App() {
   const key = "81cb46c0-65a7-11ec-b453-9f263f29ac19";
   const base = "USD";
@@ -21,17 +18,8 @@ function App() {
         .catch((err) => console.log(err));
     }, 1);
   }, []);
-  return (
-    <div className="w-screen h-screen p-6 bgmy grid grid-rows-3">
-      <Header />
-      <Table
-        cny={currency.CNY.toFixed(2)}
-        eur={currency.EUR.toFixed(2)}
-        rus={currency.RUB.toFixed(2)}
-      />
-      <Footer />
-    </div>
-  );
+
+  return <AppTemplate currency={currency} />;
 }
 
 export default App;
