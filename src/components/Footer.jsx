@@ -1,5 +1,3 @@
-import React from "react";
-
 function Footer() {
   return (
     <div className="w-full  grid justify-center text-slate-200 content-end">

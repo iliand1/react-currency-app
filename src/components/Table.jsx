@@ -1,5 +1,3 @@
-import React from "react";
-
 function Table(props) {
   return (
     <div className="flex flex-col sm:flex-row sm:justify-between px-8 gap-y-4 ">
